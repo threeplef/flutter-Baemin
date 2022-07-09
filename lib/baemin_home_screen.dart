@@ -9,14 +9,40 @@ class BaeminHomeScreen extends StatelessWidget {
       return SafeArea(
         child: Container(
           width: double.infinity,
-          decoration: BoxDecoration(color: Color(0xFF5EBEBB)),
+          decoration: const BoxDecoration(color: Color(0xFF5EBEBB)),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Container(width: 50, height: 50, color: Colors.orange),
-              Container(width: 50, height: 50, color: Colors.yellow),
-              Expanded(child: Container(height: 50)),
-              Container(width: 50, height: 50, color: Colors.white),
-              Container(width: 50, height: 50, color: Colors.purple),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.menu, color: Colors.white)),
+              const SizedBox(width: 50, height: 52),
+              Expanded(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    Expanded(
+                      child: Center(
+                        child: Text(
+                          '서울특별시 영등포구 문래동6가',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 18, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                    Icon(Icons.keyboard_arrow_down, color: Colors.white),
+                  ],
+                ),
+              ),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.notifications_none,
+                      color: Colors.white)),
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.account_circle_outlined,
+                      color: Colors.white)),
             ],
           ),
         ),
@@ -25,8 +51,35 @@ class BaeminHomeScreen extends StatelessWidget {
 
     Widget _contents() {
       return Expanded(
-        child: Container(
-          color: Colors.red,
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Container(
+                height: 60,
+                decoration: const BoxDecoration(
+                  color: Color(0xFF5EBEBB),
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(10),
+                    bottomRight: Radius.circular(10),
+                  ),
+                ),
+              ),
+              Row(
+                children: [
+                  Flexible(
+                    child: Card(
+                      child: Container(height: 200),
+                    ),
+                  ),
+                  Flexible(
+                    child: Card(
+                      child: Container(height: 200),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
