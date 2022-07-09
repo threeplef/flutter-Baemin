@@ -9,8 +9,16 @@ class BaeminHomeScreen extends StatelessWidget {
       return SafeArea(
         child: Container(
           width: double.infinity,
-          height: 60,
-          color: Colors.blue,
+          decoration: BoxDecoration(color: Color(0xFF5EBEBB)),
+          child: Row(
+            children: [
+              Container(width: 50, height: 50, color: Colors.orange),
+              Container(width: 50, height: 50, color: Colors.yellow),
+              Expanded(child: Container(height: 50)),
+              Container(width: 50, height: 50, color: Colors.white),
+              Container(width: 50, height: 50, color: Colors.purple),
+            ],
+          ),
         ),
       );
     }
