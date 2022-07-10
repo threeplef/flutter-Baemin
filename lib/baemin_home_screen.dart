@@ -292,7 +292,7 @@ class BaeminHomeScreen extends StatelessWidget {
         return Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.fromLTRB(7, 7, 7, 3),
+              padding: const EdgeInsets.fromLTRB(12, 3, 12, 7),
               child: Container(
                 height: 150,
                 decoration: BoxDecoration(
@@ -302,25 +302,25 @@ class BaeminHomeScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15),
                   child: Image.network(
                     'http://img.woowahan.com/www/common/baemin.jpg',
-                    width: 363,
+                    width: MediaQuery.of(context).size.width,
                     fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
             Positioned(
-              bottom: 20,
-              right: 20,
+              bottom: 18,
+              right: 25,
               child: Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
-                  color: Colors.black.withOpacity(0.6),
+                  color: Colors.black.withOpacity(0.4),
                 ),
                 child: const Padding(
-                  padding: EdgeInsets.fromLTRB(16, 4, 16, 4),
+                  padding: EdgeInsets.fromLTRB(12, 3, 12, 5),
                   child: Text(
                     '4 / 6 모두보기',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(fontSize: 12, color: Colors.white),
                   ),
                 ),
               ),
