@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class BaeminHomeScreen extends StatelessWidget {
@@ -16,7 +17,7 @@ class BaeminHomeScreen extends StatelessWidget {
               IconButton(
                   onPressed: () {},
                   icon: const Icon(Icons.menu, color: Colors.white)),
-              const SizedBox(width: 50, height: 52),
+              const SizedBox(width: 50, height: 45),
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -54,30 +55,12 @@ class BaeminHomeScreen extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Container(
-                height: 60,
-                decoration: const BoxDecoration(
-                  color: Color(0xFF5EBEBB),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
-                  ),
-                ),
-              ),
-              Row(
-                children: [
-                  Flexible(
-                    child: Card(
-                      child: Container(height: 200),
-                    ),
-                  ),
-                  Flexible(
-                    child: Card(
-                      child: Container(height: 200),
-                    ),
-                  ),
-                ],
-              ),
+              _search(),
+              _delivery(),
+              _packaging(),
+              _commerce(),
+              _advertisement(),
+              _additional(),
             ],
           ),
         ),
