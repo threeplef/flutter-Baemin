@@ -51,6 +51,50 @@ class BaeminHomeScreen extends StatelessWidget {
     }
 
     Widget _contents() {
+      Widget _search() {
+        return Container(
+          decoration: const BoxDecoration(
+            color: Color(0xFF5EBEBB),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(16),
+                bottomRight: Radius.circular(16)),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(16, 3, 16, 16),
+            child: Container(
+              width: double.infinity,
+              height: 45,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(2),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.transparent.withOpacity(0.1),
+                    spreadRadius: 5,
+                    blurRadius: 7,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Row(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(10.0),
+                    child: Icon(Icons.search, color: Colors.grey),
+                  ),
+                  Expanded(
+                    child: Text(
+                      '닭발? 순대? 곱창?',
+                      style: TextStyle(color: Colors.grey, fontSize: 15),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      }
+
       return Expanded(
         child: SingleChildScrollView(
           child: Column(
