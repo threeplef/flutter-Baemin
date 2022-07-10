@@ -284,6 +284,46 @@ class BaeminHomeScreen extends StatelessWidget {
           ),
         );
       }
+      Widget _advertisement() {
+        return Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(7, 7, 7, 3),
+              child: Container(
+                height: 150,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.network(
+                    'http://img.woowahan.com/www/common/baemin.jpg',
+                    width: 363,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              bottom: 20,
+              right: 20,
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: Colors.black.withOpacity(0.6),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(16, 4, 16, 4),
+                  child: Text(
+                    '4 / 6 모두보기',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      }
 
       return Expanded(
         child: SingleChildScrollView(
