@@ -349,7 +349,7 @@ class BaeminHomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const VerticalDivider(color: Colors.grey),
+                  VerticalDivider(color: Colors.grey.shade400),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
                     child: Column(
@@ -360,7 +360,7 @@ class BaeminHomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const VerticalDivider(color: Colors.grey),
+                  VerticalDivider(color: Colors.grey.shade400),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
                     child: Column(
@@ -371,7 +371,7 @@ class BaeminHomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const VerticalDivider(color: Colors.grey),
+                  VerticalDivider(color: Colors.grey.shade400),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(24, 12, 0, 0),
                     child: Column(
