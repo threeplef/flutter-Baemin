@@ -210,6 +210,80 @@ class BaeminHomeScreen extends StatelessWidget {
           ),
         );
       }
+      Widget _commerce() {
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(7, 0, 7, 3),
+          child: Row(
+            children: [
+              Flexible(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(26, 10, 26, 0),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/live.png', width: 65, height: 35),
+                          const SizedBox(height: 2),
+                          const Text('쇼핑라이브',
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(27, 10, 27, 0),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/present.png',
+                              width: 65, height: 35),
+                          const SizedBox(height: 2),
+                          const Text('선물하기',
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  child: SizedBox(
+                    height: 80,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(27, 10, 27, 0),
+                      child: Column(
+                        children: [
+                          Image.asset('assets/special.png',
+                              width: 65, height: 35),
+                          const SizedBox(height: 2),
+                          const Text('전국별미',
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold)),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        );
+      }
 
       return Expanded(
         child: SingleChildScrollView(
