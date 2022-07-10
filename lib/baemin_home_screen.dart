@@ -94,6 +94,7 @@ class BaeminHomeScreen extends StatelessWidget {
           ),
         );
       }
+
       Widget _delivery() {
         return Stack(
           children: [
@@ -173,12 +174,13 @@ class BaeminHomeScreen extends StatelessWidget {
           ],
         );
       }
+
       Widget _packaging() {
         return Padding(
           padding: const EdgeInsets.fromLTRB(7, 0, 7, 3),
           child: Card(
             shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
             child: SizedBox(
               height: 80,
               child: Row(
@@ -210,6 +212,7 @@ class BaeminHomeScreen extends StatelessWidget {
           ),
         );
       }
+
       Widget _commerce() {
         return Padding(
           padding: const EdgeInsets.fromLTRB(7, 0, 7, 3),
@@ -284,6 +287,7 @@ class BaeminHomeScreen extends StatelessWidget {
           ),
         );
       }
+
       Widget _advertisement() {
         return Stack(
           children: [
@@ -322,6 +326,66 @@ class BaeminHomeScreen extends StatelessWidget {
               ),
             ),
           ],
+        );
+      }
+
+      Widget _additional() {
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(7, 0, 7, 7),
+          child: Card(
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+            child: SizedBox(
+              height: 70,
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(25, 12, 20, 0),
+                    child: Column(
+                      children: const [
+                        Icon(Icons.check_circle_outline),
+                        SizedBox(height: 2),
+                        Text('포인트'),
+                      ],
+                    ),
+                  ),
+                  const VerticalDivider(color: Colors.grey),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+                    child: Column(
+                      children: const [
+                        Icon(Icons.airplane_ticket_outlined),
+                        SizedBox(height: 2),
+                        Text('쿠폰함'),
+                      ],
+                    ),
+                  ),
+                  const VerticalDivider(color: Colors.grey),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+                    child: Column(
+                      children: const [
+                        Icon(Icons.shopping_bag_outlined),
+                        SizedBox(height: 2),
+                        Text('선물함'),
+                      ],
+                    ),
+                  ),
+                  const VerticalDivider(color: Colors.grey),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(24, 12, 0, 0),
+                    child: Column(
+                      children: const [
+                        Icon(Icons.favorite_border),
+                        SizedBox(height: 2),
+                        Text('찜'),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         );
       }
 
