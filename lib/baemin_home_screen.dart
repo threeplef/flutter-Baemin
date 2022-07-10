@@ -187,21 +187,19 @@ class BaeminHomeScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
-                    child: Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: const [
-                          Text(
-                            '포장',
-                            style: TextStyle(
-                                fontSize: 25, fontWeight: FontWeight.bold),
-                          ),
-                          Text('가까운 가게는 직접 가지러 가지요'),
-                        ],
-                      ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: const [
+                        Text(
+                          '포장',
+                          style: TextStyle(
+                              fontSize: 25, fontWeight: FontWeight.bold),
+                        ),
+                        Text('가까운 가게는 직접 가지러 가지요'),
+                      ],
                     ),
                   ),
-                  const Spacer(),
+                  const SizedBox(width: 80),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(0, 10, 15, 5),
                     child: Image.asset('assets/package.png'),
