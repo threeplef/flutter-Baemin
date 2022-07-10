@@ -95,6 +95,86 @@ class BaeminHomeScreen extends StatelessWidget {
         );
       }
 
+      Widget _delivery() {
+        return Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.fromLTRB(7, 7, 7, 3),
+              child: Row(
+                children: [
+                  Flexible(
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: SizedBox(
+                        height: 190,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text('배민1',
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(height: 3),
+                                  Text('한 번에 한 집만\n빠르게 배달해요!'),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15)),
+                      child: SizedBox(
+                        height: 190,
+                        child: Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(15, 10, 0, 0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: const [
+                                  Text('배달',
+                                      style: TextStyle(
+                                          fontSize: 25,
+                                          fontWeight: FontWeight.bold)),
+                                  SizedBox(height: 3),
+                                  Text('세상은 넓고\n맛집은 많다'),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Positioned(
+              bottom: 15,
+              right: 5,
+              child: Row(
+                children: [
+                  Image.asset('assets/baemin1.png', width: 105),
+                  const SizedBox(width: 90),
+                  Image.asset('assets/delivery.png', width: 95),
+                  const SizedBox(width: 15),
+                ],
+              ),
+            ),
+          ],
+        );
+      }
+
       return Expanded(
         child: SingleChildScrollView(
           child: Column(
